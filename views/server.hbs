@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Server Error</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      margin-top: 100px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h2 {
+      margin-top: 0;
+      color: #dc3545;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    .error-image {
+      max-width: 100%;
+    }
+    .btn {
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #0069d9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Server Error</h2>
+    <img class="error-image" src="./images/server.png" alt="Server Error">
+    <p>Oops! Something went wrong on our server. We apologize for the inconvenience. Please try again later.</p>
+    <button class="btn" onclick="location.reload()">Retry</button>
+  </div>
+</body>
+</html>

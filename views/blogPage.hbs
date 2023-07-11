@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Message Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  {{>link}}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+
+    .container {
+      margin-top: 20px;
+      padding: 20px;
+    }
+
+    .container2 {
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+    }
+
+    .card .meta {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 4px;
+      padding: 1px 4px;
+    }
+  </style>
+</head>
+
+<body>
+  {{>navbar}}
+  <div class="container">
+    <div class="message-section align-items-stretch">
+      <h2>Messages</h2>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+        {{#each blogs}}
+        <div class="col mb-4">
+          <div class="card h-100">
+            <img src="{{this.coverImg}}" class="card-img-top" alt="Image" style="height: 200px; padding:5px">
+            <p class="meta" style="width: 250px;">Posted on {{formatDate this.createdAt}}</p>
+            <div class="card-body">
+              <h5 class="card-title">{{this.title}}</h5>
+              <p class="card-text">{{substring this.body}}</p>
+              <h4></h4>
+              <a href="{{this._id}}" class="btn btn-primary">View</a>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</body>
+  {{>script}}
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Message Page</title>
+  {{>link}}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+    .container {
+      min-width: 60vw;
+      margin: 0 auto;
+      padding: 20px;
+      padding-bottom: 5px;
+    }
+    .message-section {
+      margin-bottom: 30px;
+    }
+    .message-section h2 {
+      margin-bottom: 10px;
+    }
+    .message-section .video {
+      margin-bottom: 20px;
+    }
+    .message-section .image {
+      margin-bottom: 20px;
+    }
+    .message-section .media {
+      margin-bottom: 20px;
+    }
+    .message-input-section {
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+    }
+    .message-input-section .message-input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 40vw;
+    }
+    .message-input-section .profile-photo {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 10px;
+      text-align: center;
+    }
+    .message-input-section .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .join{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .blog-post {
+      margin-bottom: 30px;
+    }
+    .blog-post .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .blog-post .meta {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 10px;
+    }
+    .blog-post .content {
+      margin-bottom: 10px;
+    }
+    .blog-post .read-more {
+      font-size: 14px;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+    {{>navbar}}
+  <div class="container">
+    <div class="message-section">
+      <h2>Messages</h2>
+      <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="image">
+        <img src="https://via.placeholder.com/400" alt="Image">
+      </div>
+      <div class="blog-post">
+        <h2 class="title">Blog Post Title 1</h2>
+        <p class="meta">Posted on January 1, 2023</p>
+        <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non feugiat leo. Vestibulum gravida ipsum non libero venenatis, eget commodo tortor auctor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus ultricies convallis justo, sed ultrices ex ultricies in. Donec sed volutpat odio, ac maximus lacus.</p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+      <div class="media">
+        <img src="https://via.placeholder.com/400" alt="Media">
+      </div>
+    </div>
+
+    <div class="message-input-section">
+      <form>
+        <div class="form-group">
+            <div class="join">
+          <div class="profile-photo">
+            <img src="https://via.placeholder.com/50" alt="Profile Photo">
+          </div>
+          <input type="text" class="message-input" placeholder="Enter your message">
+          <button type="submit" class="btn btn-primary">Send</button>
+        </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+{{>script}}
+</html>
